@@ -27,15 +27,16 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="`wx-config --libs std,aui`" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="`wx-config --cflags`" />
 			<Add option="-Wall" />
+			<Add option="`wx-config --cflags`" />
 		</Compiler>
 		<Linker>
-			<Add option="`wx-config --libs`" />
+			<Add option="`wx-config --libs std,aui`" />
 		</Linker>
 		<Unit filename="widgetsApp.cpp" />
 		<Unit filename="widgetsApp.h" />
