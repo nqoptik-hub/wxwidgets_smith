@@ -2,6 +2,7 @@
 <wxsmith>
 	<object class="wxFrame" name="widgetsFrame">
 		<centered>1</centered>
+		<icon code="wx_file_path" />
 		<id_arg>0</id_arg>
 		<object class="wxMenuBar" variable="menu_bar_ptr" member="no">
 			<object class="wxMenu" variable="menu_file_ptr" member="no">

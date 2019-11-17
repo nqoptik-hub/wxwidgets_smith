@@ -11,6 +11,9 @@
 #include <wx/msgdlg.h>
 
 //(*InternalHeaders(widgetsFrame)
+#include <wx/bitmap.h>
+#include <wx/icon.h>
+#include <wx/image.h>
 #include <wx/intl.h>
 #include <wx/string.h>
 //*)
@@ -58,16 +61,10 @@ END_EVENT_TABLE()
 
 widgetsFrame::widgetsFrame(wxWindow* parent, wxWindowID id)
 {
-    // Create icon
-    Create(parent, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
-    {
-        std::string file_path = __FILE__;
-        std::string dir_path = file_path.substr(0, file_path.rfind("/"));
-        file_path = dir_path.append("/assets/icon/2019_05_nq.png");
-        wxIcon FrameIcon;
-        FrameIcon.CopyFromBitmap(wxBitmap(wxImage((wxString)(file_path))));
-        SetIcon(FrameIcon);
-    }
+    std::string file_path = __FILE__;
+    std::string dir_path = file_path.substr(0, file_path.rfind("/"));
+    file_path = dir_path.append("/assets/icon/2019_05_nq.png");
+    wxString wx_file_path(file_path);
 
     //(*Initialize(widgetsFrame)
     wxMenu* menu_file_ptr;
@@ -78,6 +75,11 @@ widgetsFrame::widgetsFrame(wxWindow* parent, wxWindowID id)
     wxMenuItem* menu_help_about_ptr;
 
     Create(parent, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
+    {
+    	wxIcon FrameIcon;
+    	FrameIcon.CopyFromBitmap(wx_file_path);
+    	SetIcon(FrameIcon);
+    }
     menu_bar_ptr = new wxMenuBar();
     menu_file_ptr = new wxMenu();
     menu_file_open_file_ptr = new wxMenuItem(menu_file_ptr, ID_MENU_FILE_OPEN_FILE, _("Open File...\tCtrl-O"), _("Open a file"), wxITEM_NORMAL);
