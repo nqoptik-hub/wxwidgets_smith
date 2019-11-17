@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="widgetsFrame">
+		<centered>1</centered>
+		<id_arg>0</id_arg>
+		<object class="wxMenuBar" variable="menu_bar_ptr" member="no">
+			<object class="wxMenu" variable="menu_file_ptr" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="ID_MENU_FILE_OPEN_FILE" variable="menu_file_open_file_ptr" member="no">
+					<label>Open File...</label>
+					<accel>Ctrl-O</accel>
+					<help>Open a file</help>
+					<handler function="on_open_file" entry="EVT_MENU" />
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="ID_MENU_FILE_EXIT" variable="menu_file_exit_ptr" member="no">
+					<label>Exit</label>
+					<accel>Alt-F4</accel>
+					<help>Exit the application</help>
+					<handler function="on_exit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="menu_help_ptr" member="no">
+				<label>&amp;Help</label>
+				<object class="wxMenuItem" name="ID_MENU_HELP_ABOUT" variable="menu_help_about_ptr" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>Show info about this application</help>
+					<handler function="on_about" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUS_BAR" variable="status_bar_ptr_" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+		<object class="wxFileDialog" variable="open_file_dialog_ptr_" member="yes">
+			<message>Select file</message>
+		</object>
+	</object>
+</wxsmith>
