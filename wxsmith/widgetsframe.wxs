@@ -3,7 +3,29 @@
 	<object class="wxFrame" name="widgetsFrame">
 		<centered>1</centered>
 		<icon code="wx_file_path" />
+		<size>960,720</size>
 		<id_arg>0</id_arg>
+		<object class="wxAuiManager" variable="aui_manager" member="yes">
+			<object class="AuiManagerItem">
+				<object class="wxAuiToolBar" name="ID_AUI_TOOL_BAR" variable="aui_tool_bar" member="yes">
+					<size>400,36</size>
+				</object>
+				<name>tool__bar</name>
+				<standardpanetype>Toolbar</standardpanetype>
+				<caption>Tool Bar</caption>
+				<captionvisible>0</captionvisible>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<layer>10</layer>
+				<dockfixed>0</dockfixed>
+				<dockabledirection></dockabledirection>
+				<resizable>0</resizable>
+				<gripper>Default</gripper>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+		</object>
 		<object class="wxMenuBar" variable="menu_bar_ptr" member="no">
 			<object class="wxMenu" variable="menu_file_ptr" member="no">
 				<label>&amp;File</label>

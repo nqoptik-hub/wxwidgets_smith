@@ -48,6 +48,7 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*IdInit(widgetsFrame)
+const long widgetsFrame::ID_AUI_TOOL_BAR = wxNewId();
 const long widgetsFrame::ID_MENU_FILE_OPEN_FILE = wxNewId();
 const long widgetsFrame::ID_MENU_FILE_EXIT = wxNewId();
 const long widgetsFrame::ID_MENU_HELP_ABOUT = wxNewId();
@@ -75,11 +76,17 @@ widgetsFrame::widgetsFrame(wxWindow* parent, wxWindowID id)
     wxMenuItem* menu_help_about_ptr;
 
     Create(parent, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
+    SetClientSize(wxSize(960,720));
     {
     	wxIcon FrameIcon;
     	FrameIcon.CopyFromBitmap(wx_file_path);
     	SetIcon(FrameIcon);
     }
+    aui_manager = new wxAuiManager(this, wxAUI_MGR_DEFAULT);
+    aui_tool_bar = new wxAuiToolBar(this, ID_AUI_TOOL_BAR, wxDefaultPosition, wxSize(400,36), wxAUI_TB_DEFAULT_STYLE);
+    aui_tool_bar->Realize();
+    aui_manager->AddPane(aui_tool_bar, wxAuiPaneInfo().Name(_T("tool_bar")).ToolbarPane().Caption(_("Tool Bar")).Layer(10).Top().BestSize(wxSize(400,36)).Gripper());
+    aui_manager->Update();
     menu_bar_ptr = new wxMenuBar();
     menu_file_ptr = new wxMenu();
     menu_file_open_file_ptr = new wxMenuItem(menu_file_ptr, ID_MENU_FILE_OPEN_FILE, _("Open File...\tCtrl-O"), _("Open a file"), wxITEM_NORMAL);
@@ -111,6 +118,7 @@ widgetsFrame::widgetsFrame(wxWindow* parent, wxWindowID id)
 widgetsFrame::~widgetsFrame()
 {
     //(*Destroy(widgetsFrame)
+    aui_manager->UnInit();
     //*)
 }
 
