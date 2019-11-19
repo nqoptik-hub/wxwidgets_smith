@@ -15,6 +15,7 @@
 #include <wx/filedlg.h>
 #include <wx/frame.h>
 #include <wx/menu.h>
+#include <wx/panel.h>
 #include <wx/statusbr.h>
 //*)
 
@@ -33,6 +34,8 @@ private:
 
     //(*Identifiers(widgetsFrame)
     static const long ID_AUI_TOOL_BAR;
+    static const long ID_AUI_NOTEBOOK_MANAGEMENT;
+    static const long ID_MAIN_PANEL;
     static const long ID_MENU_FILE_OPEN_FILE;
     static const long ID_MENU_FILE_EXIT;
     static const long ID_MENU_HELP_ABOUT;
@@ -41,8 +44,10 @@ private:
 
     //(*Declarations(widgetsFrame)
     wxAuiManager* aui_manager;
+    wxAuiNotebook* aui_notebook_management;
     wxAuiToolBar* aui_tool_bar;
     wxFileDialog* open_file_dialog_ptr_;
+    wxPanel* main_panel;
     wxStatusBar* status_bar_ptr_;
     //*)
 

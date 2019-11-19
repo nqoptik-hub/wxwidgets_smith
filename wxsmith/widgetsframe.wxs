@@ -25,6 +25,35 @@
 				<destroyonclose>0</destroyonclose>
 				<firstadd>0</firstadd>
 			</object>
+			<object class="AuiManagerItem">
+				<object class="wxAuiNotebook" name="ID_AUI_NOTEBOOK_MANAGEMENT" variable="aui_notebook_management" member="yes">
+					<size>250,-1</size>
+				</object>
+				<name>notebook__management</name>
+				<caption>Management</caption>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<dockdirection>Left</dockdirection>
+				<dockfixed>0</dockfixed>
+				<dockabledirection></dockabledirection>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+			<object class="AuiManagerItem">
+				<object class="wxPanel" name="ID_MAIN_PANEL" variable="main_panel" member="yes" />
+				<name>main__panel</name>
+				<caption>Main Panel</caption>
+				<captionvisible>0</captionvisible>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<dockdirection>Center</dockdirection>
+				<dockfixed>0</dockfixed>
+				<dockabledirection></dockabledirection>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
 		</object>
 		<object class="wxMenuBar" variable="menu_bar_ptr" member="no">
 			<object class="wxMenu" variable="menu_file_ptr" member="no">

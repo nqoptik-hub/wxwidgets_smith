@@ -49,6 +49,8 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 
 //(*IdInit(widgetsFrame)
 const long widgetsFrame::ID_AUI_TOOL_BAR = wxNewId();
+const long widgetsFrame::ID_AUI_NOTEBOOK_MANAGEMENT = wxNewId();
+const long widgetsFrame::ID_MAIN_PANEL = wxNewId();
 const long widgetsFrame::ID_MENU_FILE_OPEN_FILE = wxNewId();
 const long widgetsFrame::ID_MENU_FILE_EXIT = wxNewId();
 const long widgetsFrame::ID_MENU_HELP_ABOUT = wxNewId();
@@ -86,6 +88,10 @@ widgetsFrame::widgetsFrame(wxWindow* parent, wxWindowID id)
     aui_tool_bar = new wxAuiToolBar(this, ID_AUI_TOOL_BAR, wxDefaultPosition, wxSize(400,36), wxAUI_TB_DEFAULT_STYLE);
     aui_tool_bar->Realize();
     aui_manager->AddPane(aui_tool_bar, wxAuiPaneInfo().Name(_T("tool_bar")).ToolbarPane().Caption(_("Tool Bar")).Layer(10).Top().BestSize(wxSize(400,36)).Gripper());
+    aui_notebook_management = new wxAuiNotebook(this, ID_AUI_NOTEBOOK_MANAGEMENT, wxDefaultPosition, wxSize(250,-1), wxAUI_NB_DEFAULT_STYLE);
+    aui_manager->AddPane(aui_notebook_management, wxAuiPaneInfo().Name(_T("notebook_management")).DefaultPane().Caption(_("Management")).CaptionVisible().Left().BestSize(wxSize(250,-1)));
+    main_panel = new wxPanel(this, ID_MAIN_PANEL, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_MAIN_PANEL"));
+    aui_manager->AddPane(main_panel, wxAuiPaneInfo().Name(_T("main_panel")).DefaultPane().Caption(_("Main Panel")).CaptionVisible(false).Center());
     aui_manager->Update();
     menu_bar_ptr = new wxMenuBar();
     menu_file_ptr = new wxMenu();
