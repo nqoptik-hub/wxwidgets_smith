@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
 
-project(wxwidgets_basic)
+project(wxwidgets_smith)
 
 ## Compile as C++14
 set(CMAKE_CXX_STANDARD 14)
@@ -16,7 +16,7 @@ find_package(wxWidgets REQUIRED COMPONENTS net core base aui std)
 include(${wxWidgets_USE_FILE})
 
 ## Declare a C++ executable
-add_executable(widgets widgetsApp.cpp widgetsMain.cpp)
+add_executable(wxwidgets_smith widgetsApp.cpp widgetsMain.cpp)
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(widgets ${wxWidgets_LIBRARIES})
+target_link_libraries(wxwidgets_smith ${wxWidgets_LIBRARIES})
