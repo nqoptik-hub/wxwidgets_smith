@@ -79,6 +79,7 @@ widgetsFrame::widgetsFrame(wxWindow* parent, wxWindowID id)
 
     Create(parent, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
     SetClientSize(wxSize(960,720));
+    SetMinSize(wxSize(480,240));
     {
     	wxIcon FrameIcon;
     	FrameIcon.CopyFromBitmap(wx_file_path);
@@ -89,7 +90,8 @@ widgetsFrame::widgetsFrame(wxWindow* parent, wxWindowID id)
     aui_tool_bar->Realize();
     aui_manager->AddPane(aui_tool_bar, wxAuiPaneInfo().Name(_T("tool_bar")).ToolbarPane().Caption(_("Tool Bar")).Layer(10).Top().BestSize(wxSize(400,36)).Gripper());
     aui_notebook_management = new wxAuiNotebook(this, ID_AUI_NOTEBOOK_MANAGEMENT, wxDefaultPosition, wxSize(250,-1), wxAUI_NB_DEFAULT_STYLE);
-    aui_manager->AddPane(aui_notebook_management, wxAuiPaneInfo().Name(_T("notebook_management")).DefaultPane().Caption(_("Management")).CaptionVisible().Left().BestSize(wxSize(250,-1)));
+    aui_notebook_management->SetMinSize(wxSize(120,60));
+    aui_manager->AddPane(aui_notebook_management, wxAuiPaneInfo().Name(_T("notebook_management")).DefaultPane().Caption(_("Management")).CaptionVisible().Left().BestSize(wxSize(250,-1)).MinSize(wxSize(120,60)));
     main_panel = new wxPanel(this, ID_MAIN_PANEL, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_MAIN_PANEL"));
     aui_manager->AddPane(main_panel, wxAuiPaneInfo().Name(_T("main_panel")).DefaultPane().Caption(_("Main Panel")).CaptionVisible(false).Center());
     aui_manager->Update();

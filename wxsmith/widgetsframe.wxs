@@ -4,6 +4,7 @@
 		<centered>1</centered>
 		<icon code="wx_file_path" />
 		<size>960,720</size>
+		<minsize>480,240</minsize>
 		<id_arg>0</id_arg>
 		<object class="wxAuiManager" variable="aui_manager" member="yes">
 			<object class="AuiManagerItem">
@@ -28,6 +29,7 @@
 			<object class="AuiManagerItem">
 				<object class="wxAuiNotebook" name="ID_AUI_NOTEBOOK_MANAGEMENT" variable="aui_notebook_management" member="yes">
 					<size>250,-1</size>
+					<minsize>120,60</minsize>
 				</object>
 				<name>notebook__management</name>
 				<caption>Management</caption>
