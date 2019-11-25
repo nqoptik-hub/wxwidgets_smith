@@ -43,11 +43,11 @@ private:
     //*)
 
     //(*Declarations(widgetsFrame)
-    wxAuiManager* aui_manager;
-    wxAuiNotebook* aui_notebook_management;
-    wxAuiToolBar* aui_tool_bar;
+    wxAuiManager* aui_manager_;
+    wxAuiNotebook* aui_notebook_management_;
+    wxAuiToolBar* aui_tool_bar_;
     wxFileDialog* open_file_dialog_ptr_;
-    wxPanel* main_panel;
+    wxPanel* main_panel_;
     wxStatusBar* status_bar_ptr_;
     //*)
 

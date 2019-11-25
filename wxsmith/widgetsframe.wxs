@@ -6,9 +6,9 @@
 		<size>960,720</size>
 		<minsize>480,240</minsize>
 		<id_arg>0</id_arg>
-		<object class="wxAuiManager" variable="aui_manager" member="yes">
+		<object class="wxAuiManager" variable="aui_manager_" member="yes">
 			<object class="AuiManagerItem">
-				<object class="wxAuiToolBar" name="ID_AUI_TOOL_BAR" variable="aui_tool_bar" member="yes">
+				<object class="wxAuiToolBar" name="ID_AUI_TOOL_BAR" variable="aui_tool_bar_" member="yes">
 					<size>400,36</size>
 				</object>
 				<name>tool__bar</name>
@@ -27,7 +27,7 @@
 				<firstadd>0</firstadd>
 			</object>
 			<object class="AuiManagerItem">
-				<object class="wxAuiNotebook" name="ID_AUI_NOTEBOOK_MANAGEMENT" variable="aui_notebook_management" member="yes">
+				<object class="wxAuiNotebook" name="ID_AUI_NOTEBOOK_MANAGEMENT" variable="aui_notebook_management_" member="yes">
 					<size>250,-1</size>
 					<minsize>120,60</minsize>
 				</object>
@@ -43,7 +43,7 @@
 				<firstadd>0</firstadd>
 			</object>
 			<object class="AuiManagerItem">
-				<object class="wxPanel" name="ID_MAIN_PANEL" variable="main_panel" member="yes" />
+				<object class="wxPanel" name="ID_MAIN_PANEL" variable="main_panel_" member="yes" />
 				<name>main__panel</name>
 				<caption>Main Panel</caption>
 				<captionvisible>0</captionvisible>
