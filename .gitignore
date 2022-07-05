@@ -44,7 +44,7 @@
 *.csv
 *.depend
 *.layout
-build/*
-*/build/*
+build*/*
+*/build*/*
 bin/*
 */bin/*
