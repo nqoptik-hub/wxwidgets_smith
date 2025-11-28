@@ -12,8 +12,7 @@
 
 #include <wx/app.h>
 
-class widgetsApp : public wxApp
-{
+class widgetsApp : public wxApp {
 public:
     virtual bool OnInit();
 };

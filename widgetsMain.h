@@ -17,10 +17,10 @@
 #include <wx/menu.h>
 #include <wx/panel.h>
 #include <wx/statusbr.h>
+
 //*)
 
-class widgetsFrame : public wxFrame
-{
+class widgetsFrame : public wxFrame {
 public:
     widgetsFrame(wxWindow* parent, wxWindowID id = -1);
     virtual ~widgetsFrame();
@@ -43,12 +43,12 @@ private:
     //*)
 
     //(*Declarations(widgetsFrame)
-    wxAuiManager* aui_manager_;
+    wxAuiManager*  aui_manager_;
     wxAuiNotebook* aui_notebook_management_;
-    wxAuiToolBar* aui_tool_bar_;
-    wxFileDialog* open_file_dialog_ptr_;
-    wxPanel* main_panel_;
-    wxStatusBar* status_bar_ptr_;
+    wxAuiToolBar*  aui_tool_bar_;
+    wxFileDialog*  open_file_dialog_ptr_;
+    wxPanel*       main_panel_;
+    wxStatusBar*   status_bar_ptr_;
     //*)
 
     DECLARE_EVENT_TABLE()

@@ -21,8 +21,7 @@ bool widgetsApp::OnInit()
     //(*AppInitialize
     bool wxsOK = true;
     wxInitAllImageHandlers();
-    if (wxsOK)
-    {
+    if (wxsOK) {
         widgetsFrame* Frame = new widgetsFrame(0);
         Frame->Show();
         SetTopWindow(Frame);

@@ -1,0 +1,43 @@
+Language: Cpp
+
+AccessModifierOffset: -4
+AllowShortFunctionsOnASingleLine: None
+AlignAfterOpenBracket: Align
+AlignArrayOfStructures: Right
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
+AlignOperands: Align
+BinPackParameters: false
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterCaseLabel: false
+    AfterClass: false
+    AfterControlStatement: Never
+    AfterEnum: false
+    AfterFunction: true
+    AfterNamespace: false
+    AfterStruct: false
+    AfterUnion: false
+    AfterExternBlock: false
+    BeforeCatch: false
+    BeforeElse: false
+    BeforeLambdaBody: false
+    BeforeWhile: false
+    IndentBraces: false
+    SplitEmptyFunction: true
+    SplitEmptyRecord: false
+    SplitEmptyNamespace: false
+
+ColumnLimit: 0
+IncludeBlocks: Preserve
+IndentCaseLabels: true
+IndentWidth: 4
+KeepEmptyLinesAtTheStartOfBlocks: false
+NamespaceIndentation: All
+PackConstructorInitializers: NextLine
+PointerAlignment: Left
+ReferenceAlignment: Left
+SeparateDefinitionBlocks: Always
+SpacesBeforeTrailingComments: 1
